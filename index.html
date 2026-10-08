@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- Declara que el documento es HTML5 para que el navegador lo interprete en modo estándar -->
+<html lang="es"> <!-- Elemento raíz del documento; lang="es" indica que el idioma es español (ayuda a SEO y accesibilidad) -->
+<head> <!-- Contenedor de metadatos: información sobre la página que no se muestra directamente -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres UTF-8 para que se vean bien acentos, ñ y símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive: ancho = al del dispositivo y zoom inicial al 100% -->
+    <title>Mi Página Personal</title> <!-- Título que aparece en la pestaña del navegador y en resultados de búsqueda -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlaza una hoja de estilos externa para separar HTML (estructura) de CSS (presentación) -->
+</head> <!-- Cierra la sección de metadatos -->
+<body> <!-- Contenedor de todo el contenido visible de la página -->
+    <!-- HEADER --> <!-- Comentario que indica el inicio del encabezado -->
+    <header> <!-- Elemento semántico que agrupa la parte superior de la página (título y navegación) -->
+        <h1>Tu Nombre</h1> <!-- Encabezado de nivel 1, el título principal; debe haber solo uno por página -->
+        <nav> <!-- Elemento semántico que agrupa los enlaces de navegación principales -->
+            <ul> <!-- Lista desordenada: los menús son conceptualmente listas de enlaces -->
+                <li><a href="#sobre-mi">Sobre mí</a></li> <!-- Enlace interno que salta al elemento con id="sobre-mi" -->
+                <li><a href="#habilidades">Habilidades</a></li> <!-- Enlace interno que salta a la sección de habilidades -->
+                <li><a href="#contacto">Contacto</a></li> <!-- Enlace interno que salta a la sección de contacto -->
+            </ul> <!-- Cierra la lista de navegación -->
+        </nav> <!-- Cierra el bloque de navegación -->
+    </header> <!-- Cierra el encabezado -->
+
+    <!-- MAIN --> <!-- Comentario que indica el inicio del contenido principal -->
+    <main> <!-- Contenedor del contenido único y central de la página (solo debe haber uno) -->
+        <!-- Sobre mí --> <!-- Comentario descriptivo de la sección -->
+        <section id="sobre-mi"> <!-- Sección temática con id único, usado como destino del ancla del menú -->
+            <h2>Sobre mí</h2> <!-- Subtítulo de nivel 2, mantiene jerarquía respecto al h1 -->
+            <p>Hola, soy [Tu Nombre]. Estoy aprendiendo desarrollo web y este es mi primer proyecto.</p> <!-- Párrafo de texto, etiqueta semántica correcta para bloques de texto -->
+        </section> <!-- Cierra la sección Sobre mí -->
+
+        <!-- Habilidades --> <!-- Comentario descriptivo de la sección -->
+        <section id="habilidades"> <!-- Sección con id único para el ancla del menú -->
+            <h2>Habilidades</h2> <!-- Subtítulo de la sección -->
+            <ul> <!-- Lista desordenada porque el orden de las habilidades no importa -->
+                <li>HTML básico</li> <!-- Primer elemento de la lista -->
+                <li>CSS básico</li> <!-- Segundo elemento de la lista -->
+                <li>Git y GitHub</li> <!-- Tercer elemento de la lista -->
+            </ul> <!-- Cierra la lista de habilidades -->
+        </section> <!-- Cierra la sección Habilidades -->
+
+        <!-- Contacto --> <!-- Comentario descriptivo de la sección -->
+        <section id="contacto"> <!-- Sección con id único para el ancla del menú -->
+            <h2>Contacto</h2> <!-- Subtítulo de la sección -->
+            <form> <!-- Contenedor del formulario: agrupa los controles que el usuario enviará -->
+                <label for="nombre">Nombre:</label> <!-- Etiqueta descriptiva; for se vincula con el id del input para accesibilidad -->
+                <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto; id conecta con el label, name es el nombre del dato al enviar, required activa validación nativa -->
+                
+                <label for="email">Email:</label> <!-- Etiqueta descriptiva para el campo email -->
+                <input type="email" id="email" name="email" required> <!-- Campo tipo email; valida formato y muestra teclado adecuado en móviles -->
+                
+                <label for="mensaje">Mensaje:</label> <!-- Etiqueta descriptiva para el área de texto -->
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea> <!-- Área de texto multilínea; rows define la altura visible inicial -->
+                
+                <button type="submit">Enviar</button> <!-- Botón que dispara el envío del formulario -->
+            </form> <!-- Cierra el formulario -->
+        </section> <!-- Cierra la sección Contacto -->
+    </main> <!-- Cierra el contenido principal -->
+
+    <!-- FOOTER --> <!-- Comentario que indica el inicio del pie de página -->
+    <footer> <!-- Elemento semántico para el pie de página (copyright, enlaces legales, etc.) -->
+        <p> &copy; 2026 Tu Nombre. Todos los derechos reservados.</p> <!-- Párrafo con entidad HTML &copy; que representa el símbolo © -->
+    </footer> <!-- Cierra el pie de página -->
+</body> <!-- Cierra el cuerpo del documento -->
+</html> <!-- Cierra el documento HTML -->

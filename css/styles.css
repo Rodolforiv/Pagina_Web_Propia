@@ -1,0 +1,102 @@
+/* RESET */ /* Comentario que agrupa las reglas de reinicio de estilos por defecto del navegador */
+* { /* Selector universal: aplica los estilos a TODOS los elementos del documento */
+    margin: 0; /* Elimina los márgenes por defecto que el navegador añade a los elementos */
+    padding: 0; /* Elimina el relleno por defecto que el navegador añade a los elementos */
+    box-sizing: border-box; /* Hace que padding y border se incluyan dentro del width/height total del elemento (evita cálculos confusos) */
+} /* Cierra el bloque del selector universal */
+
+body { /* Selector del elemento <body>, aplica estilos al contenido visible completo */
+    font-family: Arial, sans-serif; /* Define la fuente principal Arial y como respaldo cualquier sans-serif si no está disponible */
+    line-height: 1.6; /* Establece la altura de línea a 1.6 veces el tamaño de la fuente (mejora legibilidad) */
+    color: #333; /* Color de texto gris oscuro (menos duro que el negro puro #000, mejor para leer) */
+    background-color: #f4f4f4; /* Color de fondo gris muy claro para toda la página */
+} /* Cierra el bloque del body */
+
+/* HEADER */ /* Comentario que agrupa estilos del encabezado */
+header { /* Selector del elemento <header> */
+    background-color: #2563eb; /* Fondo azul intenso (color corporativo típico, tipo Tailwind blue-600) */
+    color: white; /* Color del texto en blanco para contrastar con el fondo azul */
+    padding: 20px; /* Espacio interno de 20px alrededor del contenido del header */
+    text-align: center; /* Centra horizontalmente todo el texto y elementos inline dentro del header */
+} /* Cierra el bloque del header */
+
+header h1 { /* Selector descendiente: aplica solo a los <h1> dentro de <header> */
+    margin-bottom: 10px; /* Añade separación inferior de 10px para separar el título de la navegación */
+} /* Cierra el bloque header h1 */
+
+nav ul { /* Selector descendiente: aplica a los <ul> dentro de <nav> */
+    list-style: none; /* Quita los puntos/viñetas por defecto de la lista */
+    display: flex; /* Convierte la lista en un contenedor flexible para alinear sus hijos en fila */
+    justify-content: center; /* Centra horizontalmente los elementos flexibles dentro del <ul> */
+    gap: 20px; /* Añade 20px de separación entre cada elemento hijo (los <li>) */
+} /* Cierra el bloque nav ul */
+
+nav a { /* Selector descendiente: aplica a los enlaces <a> dentro de <nav> */
+    color: white; /* Color blanco del texto para que destaque sobre el fondo azul del header */
+    text-decoration: none; /* Quita el subrayado por defecto de los enlaces */
+} /* Cierra el bloque nav a */
+
+nav a:hover { /* Pseudo-clase :hover: aplica estilos cuando el cursor pasa por encima del enlace */
+    text-decoration: underline; /* Añade subrayado al pasar el ratón, dando feedback visual al usuario */
+} /* Cierra el bloque nav a:hover */
+
+/* MAIN */ /* Comentario que agrupa estilos del contenido principal */
+main { /* Selector del elemento <main> */
+    max-width: 800px; /* Limita el ancho máximo a 800px para que el contenido no se estire demasiado en pantallas grandes */
+    margin: 0 auto; /* margin: 0 auto centra horizontalmente el bloque al repartir el espacio sobrante a los lados */
+    padding: 20px; /* Espacio interno de 20px para separar el contenido de los bordes */
+} /* Cierra el bloque main */
+
+section { /* Selector de todas las secciones <section> */
+    background: white; /* Fondo blanco que contrasta con el gris del body, creando efecto de "tarjeta" */
+    padding: 20px; /* Espacio interno para que el contenido no toque los bordes */
+    margin-bottom: 20px; /* Separación inferior entre secciones consecutivas */
+    border-radius: 8px; /* Redondea las esquinas 8px para un look moderno y suave */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil: 0 desplazamiento horizontal, 2px vertical, 5px difuminado, negro al 10% de opacidad */
+} /* Cierra el bloque section */
+
+section h2 { /* Selector descendiente: aplica a los <h2> dentro de <section> */
+    color: #2563eb; /* Color azul del mismo tono que el header para mantener coherencia visual */
+    margin-bottom: 10px; /* Separación inferior para que el título no quede pegado al párrafo siguiente */
+} /* Cierra el bloque section h2 */
+
+/* FORMULARIO */ /* Comentario que agrupa estilos del formulario */
+form { /* Selector del elemento <form> */
+    display: flex; /* Activa Flexbox para organizar los hijos (label, input, button) */
+    flex-direction: column; /* Apila los elementos en vertical en lugar de horizontal */
+    gap: 10px; /* Añade 10px de separación entre cada elemento del formulario */
+} /* Cierra el bloque form */
+
+label { /* Selector de todas las etiquetas <label> */
+    font-weight: bold; /* Pone el texto en negrita para diferenciarlo del contenido del campo */
+} /* Cierra el bloque label */
+
+input, textarea { /* Selector agrupado: aplica los mismos estilos a inputs y textareas */
+    padding: 10px; /* Espacio interno para que el texto escrito no quede pegado al borde */
+    border: 1px solid #ccc; /* Borde gris claro de 1px sólido, sutil pero visible */
+    border-radius: 4px; /* Redondea ligeramente las esquinas de los campos */
+    font-family: inherit; /* Hereda la fuente del padre (body); sin esto, los inputs usan la fuente del sistema por defecto */
+} /* Cierra el bloque input, textarea */
+
+button { /* Selector del elemento <button> */
+    background-color: #2563eb; /* Fondo azul coherente con el resto del diseño */
+    color: white; /* Texto blanco para buen contraste */
+    padding: 10px; /* Espacio interno que hace el botón más grande y clicable */
+    border: none; /* Elimina el borde por defecto del botón */
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+    cursor: pointer; /* Cambia el cursor a "mano" al pasar sobre el botón, indicando que es clicable */
+    font-size: 16px; /* Tamaño de fuente legible en todos los dispositivos */
+} /* Cierra el bloque button */
+
+button:hover { /* Pseudo-clase :hover para el botón */
+    background-color: #1e40af; /* Azul más oscuro al pasar el ratón, dando feedback visual de interacción */
+} /* Cierra el bloque button:hover */
+
+/* FOOTER */ /* Comentario que agrupa estilos del pie de página */
+footer { /* Selector del elemento <footer> */
+    background-color: #333; /* Fondo gris oscuro que contrasta con el blanco de las secciones */
+    color: white; /* Texto blanco para buena legibilidad sobre fondo oscuro */
+    text-align: center; /* Centra horizontalmente el texto del footer */
+    padding: 20px; /* Espacio interno para que el contenido no toque los bordes */
+    margin-top: 20px; /* Separación superior respecto al contenido anterior */
+} /* Cierra el bloque footer */
